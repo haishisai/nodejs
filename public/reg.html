@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-container">
+        <div class="container">
+          <div class="logo">
+            <a href="/">
+              <img src="/img/logo.png" alt="" />
+            </a>
+          </div>
+          <ul class="nav">
+            <li><a href="/">首页</a></li>
+            <li><a href="/news.html">新闻</a></li>
+          </ul>
+          <div class="user">
+            <a data-role="personal" href="/personal.html">邓哥</a>
+            <a data-role="loginout" href="">退出登录</a>
+            <a data-role="login" href="/login.html">登录</a>
+            <a data-role="reg" href="/reg.html">注册</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conatiner">
+      <div class="center">
+        <form data-submit="reg" class="login-container">
+          <div class="form-item">
+            <div class="input">
+              <label>账号：</label
+              ><input
+                data-name="loginId"
+                data-errmsg="请输入账号"
+                autocomplete="new-password"
+                placeholder="请输入账号"
+                type="text"
+              />
+            </div>
+            <div class="error"></div>
+          </div>
+          <div class="form-item">
+            <div class="input">
+              <label>密码：</label
+              ><input
+                data-name="loginPwd"
+                data-errmsg="请输入密码"
+                placeholder="请输入密码"
+                type="password"
+                autocomplete="new-password"
+              />
+            </div>
+            <div class="error"></div>
+          </div>
+          <div class="form-item">
+            <div class="input">
+              <label>姓名：</label
+              ><input
+                data-name="name"
+                data-errmsg="请输入姓名"
+                placeholder="请输入姓名"
+                maxlength="10"
+                type="text"
+              />
+            </div>
+            <div class="error"></div>
+          </div>
+          <div class="form-item">
+            <div class="input">
+              <label>年龄：</label
+              ><input
+                data-name="age"
+                data-errmsg="请输入年龄"
+                placeholder="请输入年龄"
+                type="number"
+                min="1"
+                max="100"
+              />
+            </div>
+            <div class="error"></div>
+          </div>
+          <div class="form-item">
+            <div class="input">
+              <label></label>
+              <button>
+                注册
+              </button>
+            </div>
+            <div data-err="server" class="error txt-center"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/practice.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/form.js"></script>
+  </body>
+</html>

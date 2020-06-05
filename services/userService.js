@@ -40,4 +40,12 @@ exports.login = async function (loginId, loginPwd) {
 // 查找用户
 // id: 用户的唯一编号
 // 返回：用户对象，用户不存在返回null
-exports.getUser = async function (id) {};
+exports.getUser = async function (id) {
+  let result = await User.find({
+    _id: id
+  });
+  if (result.length === 0) {
+    return null;
+  }
+  return result[0];
+};

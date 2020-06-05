@@ -14,5 +14,5 @@ async function addNews() {
   console.log("添加新闻测试数据成功！！！");
 }
 
-addUsers()
+
 addNews();
