@@ -36,5 +36,17 @@
     </div>
     <script src="./js/practice.js"></script>
     <script src="./js/global.js"></script>
+    <script>
+      function test(name, callback){
+        console.log('验证权限'+ name);
+        callback()
+      }
+      test('ppdd', function(){
+        console.log('处理评论')
+      })
+      test('ppdd', function(){
+        console.log('处理回复')
+      })
+    </script>
   </body>
 </html>

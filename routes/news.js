@@ -1,7 +1,7 @@
 let express = require('express');
-let router = express.Router();
 let services = require('../services')
 
+let router = express.Router();
 
 router.get('/', async (req, res) => {
   let page = +req.query.page || 1

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  test
+
+  <script>
+    async function getTest() {
+      let result = await fetch('http://localhost:9527/api/test/1').then(resp => resp.json());
+      return result
+    }
+    let aaa = getTest()
+    console.log(aaa)   // promise 异步的函数 赋值也需要等待
+
+
+    async function fff(){
+      let bbb = await getTest()
+      console.log(bbb)
+    }
+    fff()
+  </script>
+</body>
+
+</html>
