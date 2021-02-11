@@ -2,7 +2,8 @@ let express = require('express');
 let cookieParser = require('cookie-parser')
 let app = express()
 let path = require('path')
-
+let cors = require('cors')
+app.use(cors());
 
 
 
@@ -12,7 +13,7 @@ app.use(cookieParser(secret))
 
 app.use(require('./middleware/LoginUser'))
 app.use(require('./middleware/Permission'))
-app.use(require('./middleware/cors'));
+// app.use(require('./middleware/cors'));
 
 
 
@@ -30,6 +31,9 @@ app.use(express.json());
 app.use('/api/user', require('./routes/user'))
 app.use('/api/news', require('./routes/news'))
 app.use('/api/test', require('./routes/test'))
+
+
+
 
 app.listen(9527, () => {
   console.log('server listening on 9527')

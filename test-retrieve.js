@@ -26,4 +26,19 @@ async function test() {
   console.log(result);
 }
 
-test();
+async function test4(keyWord) {
+  console.log(keyWord)
+  let reg = new RegExp(keyWord)
+  let res = await models.News.find({
+    $or: [
+      {
+        content : reg
+      },
+      {
+        hannel : reg
+      }
+    ]
+  })
+  console.log(res)
+} 
+test4()

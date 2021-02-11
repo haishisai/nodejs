@@ -28,11 +28,6 @@ async function reg (regInfo) {
     },
     body: str
   }).then(resp => resp.json());   // fetch 可以这样写 分开的方式在上面news
-  if (result.err) {
-    return ('注册失败')
-  }
-  alert('注册成功');
-  location.href = '/login.html'
 }
 
 /**
